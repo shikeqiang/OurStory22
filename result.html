@@ -10323,8 +10323,9 @@
                                             <div class="cr-title c-clearfix">
 
                                                 <span title="相关词语">❤️ 520</span>
+                                                <span title="誓言"><a href="./oath/index.html" style="color: pink">我们的誓言</a></span>
                                             </div>
-                                            <div class="opr-recommends-merge-panel" style="transform: ;">
+                                            <div class="opr-recommends-merge-panel" style="">
                                                 <div class="c-row c-gap-top">
                                                     <div class="c-span4  opr-recommends-merge-item "
                                                          data-click="{'rsv_re_ename':'谢谢','rsv_re_uri':'3f30a2f7476349dc8a8519ace6fe312e'}">
@@ -10921,8 +10922,8 @@
             </div>
             <div id="page">
                 <strong><span class="fk fk_cur"><i class="c-icon c-icon-bear-p"></i></span><span
-                        class="pc">1</span></strong><a href="javascript:;" target="_self"><span class="fk fkd"><i
-                    class="c-icon c-icon-bear-pn"></i></span><span class="pc">2</span></a><a href="javascript:;"
+                        class="pc">1</span></strong><a href="./oath/index.html" target="_self"><span class="fk fkd"><i
+                    class="c-icon c-icon-bear-pn"></i></span><span class="pc">2</span></a><a href="./oath/index.html"
                                                                                              target="_self"><span
                     class="fk"><i class="c-icon c-icon-bear-pn"></i></span><span class="pc">3</span></a><a
                     href="javascript:;" target="_self"><span class="fk fkd"><i class="c-icon c-icon-bear-pn"></i></span><span
@@ -10976,13 +10977,16 @@
         '对于世界而言，你是一个人;但是对于我而言，你是我的整个世界',
     ];
     let allLinks = document.getElementsByTagName("a");
+    debugger;
     for (let i = 0; i < allLinks.length; i++) {
-        allLinks[i].href = "javascript:;"
-        allLinks[i].target = "_self";
-        allLinks[i].onclick = () => {
-            document.getElementById("music").play();
-            alert(loveWords[Math.floor(Math.random() * loveWords.length)]);
-        };
+    	if(allLinks[i].innerText!='2'&&allLinks[i].innerText!='我们的誓言'){
+	        allLinks[i].href = "javascript:;"
+	        allLinks[i].target = "_self";
+	        allLinks[i].onclick = () => {
+	            document.getElementById("music").play();
+	            alert(loveWords[Math.floor(Math.random() * loveWords.length)]);
+	        };    		
+    	}
     }
 </script>
 <script src="./cursor-effect.js"></script>
